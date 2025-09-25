@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Connect with Peers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(26, 61, 255, 0.1);
+        }
+        .participation-badge {
+            background: linear-gradient(135deg, #1A3DFF 0%, #3A7BFF 100%);
+        }
+        .nextep-font {
+            font-family: 'Poppins', sans-serif;
+        }
+        .bg-primary {
+            background-color: #1A3DFF;
+        }
+        .text-primary {
+            color: #1A3DFF;
+        }
+        .bg-growth {
+            background-color: #2DCB8E;
+        }
+        .text-growth {
+            color: #2DCB8E;
+        }
+        .bg-energy {
+            background-color: #F4B942;
+        }
+        .text-energy {
+            color: #F4B942;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .rounded-lg {
+            border-radius: 12px;
+        }
+         .active {
+        border-bottom: 2px solid #1D4ED8; /* Blue underline */
+    }
+    </style>
+</head>
+<body class="bg-white font-sans">
+    <!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img src="logo.jpg" alt="Logo" class="w-10 h-10 rounded-full object-cover mr-2">
+      <span class="text-2xl font-bold text-primary">NEXTEP</span>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="flex gap-6 items-center">
+      <button onclick="navigate(this, 'index.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Home
+      </button>
+      <button onclick="navigate(this, 'connect.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Connect
+      </button>
+      <button onclick="navigate(this, 'blog.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Blog
+      </button>
+      <button onclick="navigate(this, 'org.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Organizer
+      </button>
+      <button onclick="navigate(this, 'profile.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        My Profile
+      </button>
+      <button onclick="window.location.href='https://tally.so/r/mDOBGZ'" 
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
+        Join Waitlist
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="py-16 px-4 bg-gradient-to-r from-blue-50 to-white">
+    <div class="container mx-auto text-center max-w-4xl">
+        <h1 class="text-5xl md:text-6xl font-bold text-blue-600 mb-8 flex justify-center items-center flex-wrap gap-2" data-aos="fade-up">
+            <span>NEXTEP COMMUNITY</span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-10" data-aos="fade-up" data-aos-delay="100">
+            <span class="block text-3xl md:text-4xl text-blue-600 font-semibold mb-6">"Where Students Grow Together"</span>
+            A space to grow, collaborate, and take the next step together. Explore profiles, share experiences, and build connections that spark opportunities.
+        </p>
+    </div>
+        <div class="flex justify-center space-x-4" data-aos="fade-up" data-aos-delay="200">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-md">
+                Explore Profiles
+            </button>
+            <button class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition">
+                Join Community
+            </button>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Profile Grid -->
+<section class="py-16 px-4 bg-blue-600">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-white mb-12 text-center">Featured Student Profiles</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Profile Card 1 -->
+            <div class="profile-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300" data-aos="fade-up">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full border-4 border-blue-600 overflow-hidden">
+                            <img src="profile.png" alt="Profile" class="w-full h-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-xl text-blue-600">karthikaa kannan</h3>
+                            <p class="text-blue-600">B.Tech CSE, Delhi University</p>
+                        </div>
+                    </div>
+                    <p class="text-blue-600 mb-4">Passionate about AI and robotics. Building an autonomous drone for my final year project.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="participation-badge bg-blue-600 text-white text-sm px-3 py-1 rounded-full flex items-center">
+                            <i data-feather="star" class="w-4 h-4 mr-1"></i>
+                            <span>Nextep Rank: 1</span>
+                        </div>
+                        <button onclick="window.location.href='connect-detail.html'" class="text-blue-600 text-sm font-medium hover:underline">View Details →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Card 2 -->
+            <div class="profile-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full border-4 border-blue-600 overflow-hidden">
+                            <img src="http://static.photos/people/200x200/2" alt="Profile" class="w-full h-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-xl text-blue-600">Priya Patel</h3>
+                            <p class="text-blue-600">M.Sc Physics, IIT Bombay</p>
+                        </div>
+                    </div>
+                    <p class="text-blue-600 mb-4">Quantum computing enthusiast. Published 2 papers on quantum algorithms.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="participation-badge bg-blue-600 text-white text-sm px-3 py-1 rounded-full flex items-center">
+                            <i data-feather="star" class="w-4 h-4 mr-1"></i>
+                            <span>Nextep Rank: 85</span>
+                        </div>
+                        <button onclick="window.location.href='connect-detail.html'" class="text-blue-600 text-sm font-medium hover:underline">View Details →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Card 3 -->
+            <div class="profile-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full border-4 border-blue-600 overflow-hidden">
+                            <img src="http://static.photos/people/200x200/3" alt="Profile" class="w-full h-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-xl text-blue-600">Amit Kumar</h3>
+                            <p class="text-blue-600">BBA, Symbiosis Pune</p>
+                        </div>
+                    </div>
+                    <p class="text-blue-600 mb-4">Entrepreneur building an ed-tech startup. Won national business plan competition.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="participation-badge bg-blue-600 text-white text-sm px-3 py-1 rounded-full flex items-center">
+                            <i data-feather="star" class="w-4 h-4 mr-1"></i>
+                            <span>Nextep Rank: 82</span>
+                        </div>
+                        <button onclick="window.location.href='connect-detail.html'" class="text-blue-600 text-sm font-medium hover:underline">View Details →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Card 4 -->
+<div class="profile-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300" data-aos="fade-up">
+    <div class="p-6">
+        <div class="flex items-center mb-4">
+            <div class="w-16 h-16 rounded-full border-4 border-blue-600 overflow-hidden">
+                <img src="http://static.photos/people/200x200/4" alt="Profile" class="w-full h-full object-cover">
+            </div>
+            <div class="ml-4">
+                <h3 class="font-bold text-xl text-blue-600">Neha Gupta</h3>
+                <p class="text-blue-600">M.Tech Mechanical, NIT Trichy</p>
+            </div>
+        </div>
+        <p class="text-blue-600 mb-4">Sustainable energy researcher. Developed solar-powered irrigation system.</p>
+        <div class="flex justify-between items-center">
+            <div class="participation-badge bg-blue-600 text-white text-sm px-3 py-1 rounded-full flex items-center">
+                <i data-feather="star" class="w-4 h-4 mr-1"></i>
+                <span>Nextep Rank: 72</span>
+            </div>
+            <button onclick="window.location.href='connect-detail.html'" class="text-blue-600 text-sm font-medium hover:underline">View Details →</button>
+        </div>
+    </div>
+</div>
+
+<!-- Profile Card 5 -->
+<div class="profile-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300" data-aos="fade-up" data-aos-delay="100">
+    <div class="p-6">
+        <div class="flex items-center mb-4">
+            <div class="w-16 h-16 rounded-full border-4 border-blue-600 overflow-hidden">
+                <img src="http://static.photos/people/200x200/5" alt="Profile" class="w-full h-full object-cover">
+            </div>
+            <div class="ml-4">
+                <h3 class="font-bold text-xl text-blue-600">Suresh Iyer</h3>
+                <p class="text-blue-600">B.Arch, SPA Delhi</p>
+            </div>
+        </div>
+        <p class="text-blue-600 mb-4">Urban planner focused on smart cities. Designed award-winning metro station concept.</p>
+        <div class="flex justify-between items-center">
+            <div class="participation-badge bg-blue-600 text-white text-sm px-3 py-1 rounded-full flex items-center">
+                <i data-feather="star" class="w-4 h-4 mr-1"></i>
+                <span>Nextep Rank: 68</span>
+            </div>
+            <button onclick="window.location.href='connect-detail.html'" class="text-blue-600 text-sm font-medium hover:underline">View Details →</button>
+        </div>
+    </div>
+</div>
+
+<!-- Profile Card 6 -->
+<div class="profile-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300" data-aos="fade-up" data-aos-delay="200">
+    <div class="p-6">
+        <div class="flex items-center mb-4">
+            <div class="w-16 h-16 rounded-full border-4 border-blue-600 overflow-hidden">
+                <img src="http://static.photos/people/200x200/6" alt="Profile" class="w-full h-full object-cover">
+            </div>
+            <div class="ml-4">
+                <h3 class="font-bold text-xl text-blue-600">Ananya Das</h3>
+                <p class="text-blue-600">B.Sc Microbiology, DU</p>
+            </div>
+        </div>
+        <p class="text-blue-600 mb-4">Biotech researcher working on novel antibiotics. Published in international journal.</p>
+        <div class="flex justify-between items-center">
+            <div class="participation-badge bg-blue-600 text-white text-sm px-3 py-1 rounded-full flex items-center">
+                <i data-feather="star" class="w-4 h-4 mr-1"></i>
+                <span>Nextep Rank: 65</span>
+            </div>
+            <button onclick="window.location.href='connect-detail.html'" class="text-blue-600 text-sm font-medium hover:underline">View Details →</button>
+        </div>
+    </div>
+</div>
+        </div>
+
+        <div class="text-center mt-12">
+            <button class="border border-white text-white hover:bg-blue-50 hover:text-blue-600 px-6 py-3 rounded-lg font-medium transition">
+                Load More Profiles
+            </button>
+        </div>
+    </div>
+</section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 bg-blue-600 text-white">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Ready to showcase your journey?</h2>
+            <p class="text-xl mb-8 opacity-90" data-aos="fade-up" data-aos-delay="100">
+                Join thousands of students sharing their achievements and connecting with peers.
+            </p>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <button class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg">
+                    Create Your Profile Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="logo.jpg" alt="Logo" class="w-10 h-10 rounded-full object-cover mr-2">
+                        <span class="text-2xl font-bold text-white">NEXTEP</span>
+                    </div>
+                    <p class="text-gray-400">Helping students discover their next big opportunity since 2025.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="home.html" class="text-gray-400 hover:text-white transition">Opportunities</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="text-center flex flex-col items-center space-y-4">
+    <h4 class="text-lg font-semibold text-white">Connect</h4>
+
+    <!-- Social Icons Vertical -->
+<div class="grid grid-cols-2 gap-3 items-start text-white">
+    <!-- Icons Column -->
+    <div class="flex flex-col items-center space-y-3">
+        <i data-feather="instagram" class="hover:text-blue-300 transition cursor-pointer"></i>
+        <i data-feather="linkedin" class="hover:text-blue-300 transition cursor-pointer"></i>
+        <i data-feather="youtube" class="hover:text-blue-300 transition cursor-pointer"></i>
+    </div>
+
+    <!-- Text Column -->
+    <div class="flex flex-col space-y-3">
+        <a href="https://www.instagram.com/nextep.students/" target="_blank" class="hover:text-blue-300 transition">nextep.students</a>
+        <a href="https://nextepforstudentslinkedin.com/company" target="_blank" class="hover:text-blue-300 transition">Nextep</a>
+        <a href="#" class="hover:text-blue-300 transition">YouTube</a>
+    </div>
+</div>
+
+<!-- Email with Icon -->
+<div class="flex items-center space-x-2 text-white mt-4">
+    <i data-feather="mail" class="hover:text-blue-300 transition cursor-pointer"></i>
+    <a href="mailto:nextepforstudents@gmail.com" class="underline hover:text-blue-300">nextepforstudents@gmail.com</a>
+</div>
+
+<script>
+    feather.replace(); // Load Feather icons
+</script>
+</div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-2">Stay updated with new opportunities.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="bg-gray-800 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary w-full">
+                        <button class="bg-primary text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 NEXTEP. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+
+        // Function to set active underline on click
+    function navigate(button, url) {
+        document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        window.location.href = url;
+    }
+
+    // Keep underline on current page after reload
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+        if (btn.getAttribute('onclick').includes(currentPage)) {
+            btn.classList.add('active');
+        }
+    });
+    </script>
+    <script>
+  function navigate(button, page) {
+    // Remove active style from all buttons
+    document.querySelectorAll(".nav-btn").forEach(btn => {
+      btn.classList.remove("text-blue-600", "font-bold");
+      btn.classList.add("text-black");
+    });
+
+    // Add active style to clicked button
+    button.classList.remove("text-black");
+    button.classList.add("text-blue-600", "font-bold");
+
+    // Navigate to the page
+    window.location.href = page;
+  }
+
+  // Highlight current page on load
+  window.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-btn").forEach(btn => {
+      if (btn.getAttribute("onclick").includes(currentPath)) {
+        btn.classList.add("text-blue-600", "font-bold");
+        btn.classList.remove("text-black");
+      }
+    });
+  });
+</script>
+</body>
+</html>
