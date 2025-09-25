@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXTEP - Your Next Step Towards Opportunities</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .nextep-font {
+            font-family: 'Poppins', sans-serif;
+        }
+        .bg-primary {
+            background-color: #1A3DFF;
+        }
+        .text-primary {
+            color: #1A3DFF;
+        }
+        .bg-growth {
+            background-color: #2DCB8E;
+        }
+        .text-growth {
+            color: #2DCB8E;
+        }
+        .bg-energy {
+            background-color: #F4B942;
+        }
+        .text-energy {
+            color: #F4B942;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .rounded-lg {
+            border-radius: 12px;
+        }
+  header {
+    transition: top 0.3s ease-in-out;
+  }
+      .active {
+        border-bottom: 2px solid #1D4ED8; /* Blue underline */
+    }
+</style>
+</head>
+<body class="nextep-font bg-white text-gray-800">
+    <!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img src="logo.jpg" alt="Logo" class="w-10 h-10 rounded-full object-cover mr-2">
+      <span class="text-2xl font-bold text-primary">NEXTEP</span>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="flex gap-6 items-center">
+      <button onclick="navigate(this, 'index.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Home
+      </button>
+      <button onclick="navigate(this, 'connect.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Connect
+      </button>
+      <button onclick="navigate(this, 'blog.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Blog
+      </button>
+      <button onclick="navigate(this, 'org.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Organizer
+      </button>
+      <button onclick="navigate(this, 'profile.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        My Profile
+      </button>
+      <button onclick="window.location.href='https://tally.so/r/mDOBGZ'" 
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
+    Join Waitlist
+</button>
+    </div>
+  </div>
+</header>
+
+    <!-- Hero Section -->
+<section class="py-20" style="background-color: #1A3DFF;">
+    <div class="container mx-auto px-4 flex flex-col items-center text-center">
+        <div class="w-full mb-10 md:mb-0" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-white">
+                <span>One Step Closer</span><br>
+                <span class="tracking-widest">To Your Next Big</span><br> 
+                <span>Opportunity</span>
+            </h1>
+            <p class="text-lg text-white mb-8">
+                Opportunities shouldn’t be hard to find<br>
+                Browse workshops, hackathons, conferences, and more - all in one place<br>
+                NEXTEP helps you discover, track, and showcase the opportunities<br>
+                Because your talent deserves the right stage!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="window.location.href='https://tally.so/r/mDOBGZ'"
+                        class="bg-white text-primary border border-primary px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition duration-300">
+                    Join Waitlist
+                </button>
+                <button onclick="window.location.href='signin.html'" 
+                        class="bg-blue-600 text-white border border-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300">
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AOS Library -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+    <!-- How It Works -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+       <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-blue-600">
+    How NEXTEP Works
+</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Step 1 -->
+    <div class="bg-blue-600 p-6 rounded-lg card-shadow" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-user-plus text-blue-600 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-white">Sign Up & Build Your Profile</h3>
+        <p class="text-white">Create your NEXTEP profile in minutes. Share your interests, education, and goals so the platform can personalize opportunities for you. Your journey starts with a single step.</p>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="bg-blue-600 p-6 rounded-lg card-shadow" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-search text-blue-600 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-white">Discover Opportunities</h3>
+        <p class="text-white">Browse workshops, hackathons, conferences, competitions, and more — all curated to match your field of interest. Filters and smart recommendations make finding the right one effortless.</p>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="bg-blue-600 p-6 rounded-lg card-shadow" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-file-signature text-blue-600 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-white">Apply & Participate</h3>
+        <p class="text-white">With one click, get directed to the organizer’s registration page. Save, bookmark, or share opportunities to stay on top of deadlines and never miss out.</p>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="bg-blue-600 p-6 rounded-lg card-shadow" data-aos="fade-up" data-aos-delay="400">
+        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-white">Track Your Growth</h3>
+        <p class="text-white">Every opportunity you join adds to your NEXTEP profile. Build a portfolio of achievements, grow your NEXTEP score, and let your journey inspire others in the community.</p>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="bg-blue-600 p-6 rounded-lg card-shadow" data-aos="fade-up" data-aos-delay="500">
+        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-users text-blue-600 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-white">Connect With Students Like You</h3>
+        <p class="text-white">Discover profiles of peers from across fields and regions. See their journeys, achievements, and shared passions — and connect with them through their social platforms.</p>
+    </div>
+
+    <!-- Step 6 -->
+    <div class="bg-blue-600 p-6 rounded-lg card-shadow" data-aos="fade-up" data-aos-delay="600">
+        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-hands-helping text-blue-600 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-white">Be Part of Something Bigger</h3>
+        <p class="text-white">Every step you take on NEXTEP fuels not just your growth but also our mission. A share of profits goes toward educating underprivileged children, so your journey creates impact.</p>
+    </div>
+</div>
+    </div>
+</section>
+
+<section class="py-16 bg-blue-600">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-white">ABOUT NEXTEP</h2>
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        
+        <!-- Left Side: About Content -->
+        <div class="bg-blue-600 border border-white p-6 rounded-lg text-white h-full">
+            <p class="mb-4">
+                At NEXTEP, we believe every student deserves the chance to discover life-changing opportunities. 
+                From hackathons and workshops to conferences and competitions, our platform brings everything 
+                into one place — simple, accessible, and tailored to your interests.
+            </p>
+            <p class="mb-4">
+                We’re more than just an opportunity board. NEXTEP helps you build your profile, track your 
+                achievements, and showcase your growth to the world. With every step you take, you not only 
+                move closer to your goals but also contribute to our mission of supporting education for 
+                underprivileged students.
+            </p>
+            <p>
+                NEXTEP isn’t just a platform. It’s a movement — a community of dreamers, doers, and changemakers 
+                taking the next step toward a brighter future.
+            </p>
+        </div>
+        
+        <!-- Right Side: Mission & Vision Boxes -->
+        <div class="flex flex-col gap-6 h-full">
+            <!-- Our Mission -->
+            <div class="bg-white text-blue-600 p-6 rounded-lg shadow-md flex-1">
+                <h3 class="text-2xl font-semibold mb-2">Our Mission</h3>
+                <p>
+                    To empower students by connecting them with the right opportunities, fostering personal growth, 
+                    and creating a platform where achievements are recognized and celebrated — while giving back by 
+                    supporting the education of underprivileged children.
+                </p>
+            </div>
+            <!-- Our Vision -->
+            <div class="bg-white text-blue-600 p-6 rounded-lg shadow-md flex-1">
+                <h3 class="text-2xl font-semibold mb-2">Our Vision</h3>
+                <p>
+                    To become the most trusted global hub for student opportunities, where every learner, regardless 
+                    of background, has equal access to grow, compete, and succeed — shaping a generation of innovators, 
+                    leaders, and changemakers.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add Font Awesome properly -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-blue-600">
+    What Students Say
+</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Card 1 -->
+    <div class="bg-blue-600 p-6 rounded-lg card-shadow text-white" data-aos="fade-right">
+        <div class="flex items-center mb-4">
+            <img src="http://static.photos/people/200x200/1" alt="Student" class="w-12 h-12 rounded-full mr-4 border-4 border-white">
+            <div>
+                <h4 class="font-semibold">Rahul Sharma</h4>
+                <p class="text-white text-sm opacity-80">Computer Science Student</p>
+            </div>
+        </div>
+        <p class="opacity-90">"NEXTEP helped me discover hackathons I wouldn't have found otherwise. I've grown my skills and network significantly!"</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-blue-600 p-6 rounded-lg card-shadow text-white" data-aos="fade-left">
+        <div class="flex items-center mb-4">
+            <img src="http://static.photos/people/200x200/2" alt="Student" class="w-12 h-12 rounded-full mr-4 border-4 border-white">
+            <div>
+                <h4 class="font-semibold">Priya Patel</h4>
+                <p class="text-white text-sm opacity-80">Design Student</p>
+            </div>
+        </div>
+        <p class="opacity-90">"The personalized recommendations saved me so much time. I found my perfect design internship through NEXTEP."</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-blue-600 p-6 rounded-lg card-shadow text-white" data-aos="fade-right">
+        <div class="flex items-center mb-4">
+            <img src="http://static.photos/people/200x200/3" alt="Student" class="w-12 h-12 rounded-full mr-4 border-4 border-white">
+            <div>
+                <h4 class="font-semibold">Ankit Verma</h4>
+                <p class="text-white text-sm opacity-80">Mechanical Engineering Student</p>
+            </div>
+        </div>
+        <p class="opacity-90">"Thanks to NEXTEP, I was able to participate in multiple robotics competitions and learn real-world skills!"</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-blue-600 p-6 rounded-lg card-shadow text-white" data-aos="fade-left">
+        <div class="flex items-center mb-4">
+            <img src="http://static.photos/people/200x200/4" alt="Student" class="w-12 h-12 rounded-full mr-4 border-4 border-white">
+            <div>
+                <h4 class="font-semibold">Sneha Iyer</h4>
+                <p class="text-white text-sm opacity-80">MBA Student</p>
+            </div>
+        </div>
+        <p class="opacity-90">"The career workshops and guidance from NEXTEP gave me the confidence to crack my dream job interview!"</p>
+    </div>
+</div>
+<div class="flex justify-center mt-8">
+    <button onclick="window.location.href='https://tally.so/r/mDOBGZ'" 
+        class="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300">
+        Join Waitlist
+    </button>
+</div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Take Your Next Step?</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">Join thousands of students discovering their next opportunity.</p>
+            <button onclick="window.location.href='https://tally.so/r/mDOBGZ'" class="bg-white text-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">
+                Join Waitlist Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="logo.jpg" alt="Logo" class="w-10 h-10 rounded-full object-cover mr-2">
+                        <span class="text-2xl font-bold text-white">NEXTEP</span>
+                    </div>
+                    <p class="text-gray-400">Helping students discover their next big opportunity since 2025.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="home.html" class="text-gray-400 hover:text-white transition">Opportunities</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="text-center flex flex-col items-center space-y-4">
+    <h4 class="text-lg font-semibold text-white">Connect</h4>
+
+    <!-- Social Icons Vertical -->
+<div class="grid grid-cols-2 gap-3 items-start text-white">
+    <!-- Icons Column -->
+    <div class="flex flex-col items-center space-y-3">
+        <i data-feather="instagram" class="hover:text-blue-300 transition cursor-pointer"></i>
+        <i data-feather="linkedin" class="hover:text-blue-300 transition cursor-pointer"></i>
+        <i data-feather="youtube" class="hover:text-blue-300 transition cursor-pointer"></i>
+    </div>
+
+    <!-- Text Column -->
+    <div class="flex flex-col space-y-3">
+        <a href="https://www.instagram.com/nextep.students/" target="_blank" class="hover:text-blue-300 transition">nextep.students</a>
+        <a href="https://nextepforstudentslinkedin.com/company" target="_blank" class="hover:text-blue-300 transition">Nextep</a>
+        <a href="#" class="hover:text-blue-300 transition">YouTube</a>
+    </div>
+</div>
+
+<!-- Email with Icon -->
+<div class="flex items-center space-x-2 text-white mt-4">
+    <i data-feather="mail" class="hover:text-blue-300 transition cursor-pointer"></i>
+    <a href="mailto:nextepforstudents@gmail.com" class="underline hover:text-blue-300">nextepforstudents@gmail.com</a>
+</div>
+
+<script>
+    feather.replace(); // Load Feather icons
+</script>
+</div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-2">Stay updated with new opportunities.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="bg-gray-800 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary w-full">
+                        <button class="bg-primary text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 NEXTEP. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+
+  let lastScrollTop = 0;
+  const header = document.querySelector('header');
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+      // Scrolling down → hide header
+      header.style.top = "-100px";
+    } else {
+      // Scrolling up → show header
+      header.style.top = "0";
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+  });
+
+  // Function to set active underline on click
+    function navigate(button, url) {
+        document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        window.location.href = url;
+    }
+
+    // Keep underline on current page after reload
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+        if (btn.getAttribute('onclick').includes(currentPage)) {
+            btn.classList.add('active');
+        }
+    });
+    </script>
+    <script>
+  function navigate(button, page) {
+    // Remove active style from all buttons
+    document.querySelectorAll(".nav-btn").forEach(btn => {
+      btn.classList.remove("text-blue-600", "font-bold");
+      btn.classList.add("text-black");
+    });
+
+    // Add active style to clicked button
+    button.classList.remove("text-black");
+    button.classList.add("text-blue-600", "font-bold");
+
+    // Navigate to the page
+    window.location.href = page;
+  }
+
+  // Highlight current page on load
+  window.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-btn").forEach(btn => {
+      if (btn.getAttribute("onclick").includes(currentPath)) {
+        btn.classList.add("text-blue-600", "font-bold");
+        btn.classList.remove("text-black");
+      }
+    });
+  });
+</script>
+</body>
+</html>

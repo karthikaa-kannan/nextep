@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunity Detail | NEXTEP</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .bg-primary {
+            background-color: #1A3DFF;
+        }
+        .text-primary {
+            color: #1A3DFF;
+        }
+        .border-primary {
+            border-color: #1A3DFF;
+        }
+        .bg-accent {
+            background-color: #F4B942;
+        }
+        .text-accent {
+            color: #F4B942;
+        }
+        .rounded-lg {
+            border-radius: 10px;
+        }
+        .shadow-card {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+         .active {
+        border-bottom: 2px solid #1D4ED8; /* Blue underline */
+    }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img src="logo.jpg" alt="Logo" class="w-10 h-10 rounded-full object-cover mr-2">
+      <span class="text-2xl font-bold text-primary">NEXTEP</span>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="flex gap-6 items-center">
+      <button onclick="navigate(this, 'index.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Home
+      </button>
+      <button onclick="navigate(this, 'connect.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Connect
+      </button>
+      <button onclick="navigate(this, 'blog.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Blog
+      </button>
+      <button onclick="navigate(this, 'org.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Organizer
+      </button>
+      <button onclick="navigate(this, 'profile.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        My Profile
+      </button>
+      <button onclick="window.location.href='https://tally.so/r/mDOBGZ'" 
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
+        Join Waitlist
+      </button>
+    </div>
+  </div>
+</header>
+
+    <!-- Main Content -->
+    <main class="py-12 px-6 md:px-12 lg:px-24">
+        <div class="max-w-6xl mx-auto">
+            <!-- Back Button -->
+            <div class="mb-6">
+                <a href="opportunities.html" class="flex items-center text-primary hover:text-blue-700 transition">
+                    <i data-feather="chevron-left" class="w-5 h-5 mr-1"></i>
+                    Back to Opportunities
+                </a>
+            </div>
+
+            <!-- Opportunity Header -->
+            <div class="bg-white rounded-lg shadow-card p-6 mb-8" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/3 mb-6 md:mb-0 md:pr-6">
+                        <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg overflow-hidden">
+                            <img src="http://static.photos/technology/640x360/3" alt="Hackathon" class="h-full w-full object-cover">
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <div class="flex justify-between items-start mb-2">
+                            <div class="flex space-x-2">
+                                <span class="bg-blue-100 text-primary text-xs font-medium px-2 py-1 rounded">Hackathon</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded">Online</span>
+                                <span class="bg-accent text-white text-xs font-medium px-2 py-1 rounded">Featured</span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="p-2 rounded-full hover:bg-gray-100 transition">
+                                    <i data-feather="heart" class="w-5 h-5 text-gray-500"></i>
+                                </button>
+                                <button class="p-2 rounded-full hover:bg-gray-100 transition">
+                                    <i data-feather="share-2" class="w-5 h-5 text-gray-500"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h1 class="text-2xl md:text-3xl font-bold mb-4">Global Student Hackathon</h1>
+                        <div class="flex flex-wrap items-center gap-4 mb-6">
+                            <div class="flex items-center">
+                                <i data-feather="calendar" class="w-5 h-5 text-gray-500 mr-2"></i>
+                                <span class="text-gray-700">May 13-15, 2023</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2"></i>
+                                <span class="text-gray-700">48 Hours</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2"></i>
+                                <span class="text-gray-700">Virtual Event</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="#" class="bg-primary text-white px-8 py-3 rounded-lg font-medium text-center hover:bg-blue-700 transition">
+                                Apply Now
+                            </a>
+                            <a href="#" class="border-2 border-primary text-primary px-8 py-3 rounded-lg font-medium text-center hover:bg-blue-50 transition">
+                                Visit Website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opportunity Details -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <!-- About Section -->
+                    <div class="bg-white rounded-lg shadow-card p-6 mb-8" data-aos="fade-up">
+                        <h2 class="text-xl font-bold mb-4">About the Hackathon</h2>
+                        <div class="prose max-w-none">
+                            <p class="mb-4">The Global Student Hackathon is an annual 48-hour coding competition that brings together talented students from around the world to solve real-world problems through technology.</p>
+                            <p class="mb-4">This year's theme is "Tech for Good" - we're challenging participants to build solutions that address pressing global issues in education, healthcare, sustainability, and more.</p>
+                            <p>With over $10,000 in prizes and mentorship from industry leaders, this is your chance to showcase your skills, learn from experts, and connect with like-minded peers.</p>
+                        </div>
+                    </div>
+
+                    <!-- Eligibility Section -->
+                    <div class="bg-white rounded-lg shadow-card p-6 mb-8" data-aos="fade-up">
+                        <h2 class="text-xl font-bold mb-4">Eligibility</h2>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-5 h-5 text-green-500 mr-2 mt-0.5"></i>
+                                <span>Open to all students currently enrolled in a university or college</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-5 h-5 text-green-500 mr-2 mt-0.5"></i>
+                                <span>Recent graduates (within 1 year) are also eligible</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-5 h-5 text-green-500 mr-2 mt-0.5"></i>
+                                <span>Teams of 2-4 participants (can be from different institutions)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-5 h-5 text-green-500 mr-2 mt-0.5"></i>
+                                <span>All skill levels welcome - from beginners to advanced coders</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Prizes Section -->
+                    <div class="bg-white rounded-lg shadow-card p-6 mb-8" data-aos="fade-up">
+                        <h2 class="text-xl font-bold mb-4">Prizes & Perks</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h3 class="font-bold text-lg text-primary mb-2">1st Place</h3>
+                                <p class="text-gray-700">$5,000 cash prize</p>
+                                <p class="text-gray-700">Mentorship with tech leaders</p>
+                                <p class="text-gray-700">Featured on our platform</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h3 class="font-bold text-lg text-primary mb-2">2nd Place</h3>
+                                <p class="text-gray-700">$3,000 cash prize</p>
+                                <p class="text-gray-700">Interview opportunities</p>
+                                <p class="text-gray-700">Premium NEXTEP membership</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h3 class="font-bold text-lg text-primary mb-2">3rd Place</h3>
+                                <p class="text-gray-700">$2,000 cash prize</p>
+                                <p class="text-gray-700">Swag package</p>
+                                <p class="text-gray-700">Certificate of achievement</p>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-gray-600">All participants will receive digital certificates and access to exclusive NEXTEP resources.</p>
+                    </div>
+
+                    <!-- Schedule Section -->
+                    <div class="bg-white rounded-lg shadow-card p-6" data-aos="fade-up">
+                        <h2 class="text-xl font-bold mb-4">Schedule</h2>
+                        <div class="space-y-4">
+                            <div class="flex">
+                                <div class="w-24 flex-shrink-0">
+                                    <span class="font-medium">May 13</span>
+                                </div>
+                                <div class="pl-4">
+                                    <h3 class="font-medium">Opening Ceremony</h3>
+                                    <p class="text-gray-600 text-sm">10:00 AM - 11:00 AM (GMT)</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-24 flex-shrink-0">
+                                    <span class="font-medium">May 13</span>
+                                </div>
+                                <div class="pl-4">
+                                    <h3 class="font-medium">Hacking Begins</h3>
+                                    <p class="text-gray-600 text-sm">12:00 PM (GMT)</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-24 flex-shrink-0">
+                                    <span class="font-medium">May 14</span>
+                                </div>
+                                <div class="pl-4">
+                                    <h3 class="font-medium">Mentorship Sessions</h3>
+                                    <p class="text-gray-600 text-sm">10:00 AM - 4:00 PM (GMT)</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-24 flex-shrink-0">
+                                    <span class="font-medium">May 15</span>
+                                </div>
+                                <div class="pl-4">
+                                    <h3 class="font-medium">Submission Deadline</h3>
+                                    <p class="text-gray-600 text-sm">12:00 PM (GMT)</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-24 flex-shrink-0">
+                                    <span class="font-medium">May 15</span>
+                                </div>
+                                <div class="pl-4">
+                                    <h3 class="font-medium">Final Presentations</h3>
+                                    <p class="text-gray-600 text-sm">2:00 PM - 5:00 PM (GMT)</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-24 flex-shrink-0">
+                                    <span class="font-medium">May 15</span>
+                                </div>
+                                <div class="pl-4">
+                                    <h3 class="font-medium">Awards Ceremony</h3>
+                                    <p class="text-gray-600 text-sm">6:00 PM - 7:00 PM (GMT)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <!-- Organizer Info -->
+                    <div class="bg-white rounded-lg shadow-card p-6 mb-8" data-aos="fade-up">
+                        <h2 class="text-xl font-bold mb-4">Organizer</h2>
+                        <div class="flex items-center mb-4">
+                            <img src="http://static.photos/technology/200x200/2" alt="Organizer Logo" class="h-12 w-12 rounded-lg mr-4">
+                            <div>
+                                <h3 class="font-bold">Tech Education Foundation</h3>
+                                <p class="text-gray-600 text-sm">Non-profit organization</p>
+                            </div>
+                        </div>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            Visit Organizer Website <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Quick Facts -->
+                    <div class="bg-white rounded-lg shadow-card p-6 mb-8" data-aos="fade-up">
+                        <h2 class="text-xl font-bold mb-4">Quick Facts</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <h3 class="font-medium text-gray-500">Application Deadline</h3>
+                                <p class="font-medium">May 10, 2023</p>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-gray-500">Event Dates</h3>
+                                <p class="font-medium">May 13-15, 2023</p>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-gray-500">Location</h3>
+                                <p class="font-medium">Virtual (Online)</p>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-gray-500">Team Size</h3>
+                                <p class="font-medium">2-4 members</p>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-gray-500">Participation Fee</h3>
+                                <p class="font-medium">Free</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="bg-white rounded-lg shadow-card p-6" data-aos="fade-up">
+                        <h2 class="text-xl font-bold mb-4">Tags</h2>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-3 py-1 rounded-full">Coding</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-3 py-1 rounded-full">Technology</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-3 py-1 rounded-full">Competition</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-3 py-1 rounded-full">Teamwork</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-3 py-1 rounded-full">Innovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="logo.jpg" alt="Logo" class="w-10 h-10 rounded-full object-cover mr-2">
+                        <span class="text-2xl font-bold text-white">NEXTEP</span>
+                    </div>
+                    <p class="text-gray-400">Helping students discover their next big opportunity since 2025.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="home.html" class="text-gray-400 hover:text-white transition">Opportunities</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="text-center flex flex-col items-center space-y-4">
+    <h4 class="text-lg font-semibold text-white">Connect</h4>
+
+    <!-- Social Icons Vertical -->
+<div class="grid grid-cols-2 gap-3 items-start text-white">
+    <!-- Icons Column -->
+    <div class="flex flex-col items-center space-y-3">
+        <i data-feather="instagram" class="hover:text-blue-300 transition cursor-pointer"></i>
+        <i data-feather="linkedin" class="hover:text-blue-300 transition cursor-pointer"></i>
+        <i data-feather="youtube" class="hover:text-blue-300 transition cursor-pointer"></i>
+    </div>
+
+    <!-- Text Column -->
+    <div class="flex flex-col space-y-3">
+        <a href="https://www.instagram.com/nextep.students/" target="_blank" class="hover:text-blue-300 transition">nextep.students</a>
+        <a href="https://nextepforstudentslinkedin.com/company" target="_blank" class="hover:text-blue-300 transition">Nextep</a>
+        <a href="#" class="hover:text-blue-300 transition">YouTube</a>
+    </div>
+</div>
+
+<!-- Email with Icon -->
+<div class="flex items-center space-x-2 text-white mt-4">
+    <i data-feather="mail" class="hover:text-blue-300 transition cursor-pointer"></i>
+    <a href="mailto:nextepforstudents@gmail.com" class="underline hover:text-blue-300">nextepforstudents@gmail.com</a>
+</div>
+
+<script>
+    feather.replace(); // Load Feather icons
+</script>
+</div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-2">Stay updated with new opportunities.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="bg-gray-800 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary w-full">
+                        <button class="bg-primary text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 NEXTEP. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    <script>
+        feather.replace();
+
+        // Function to set active underline on click
+    function navigate(button, url) {
+        document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        window.location.href = url;
+    }
+
+    // Keep underline on current page after reload
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+        if (btn.getAttribute('onclick').includes(currentPage)) {
+            btn.classList.add('active');
+        }
+    });
+    </script>
+    <script>
+  function navigate(button, page) {
+    // Remove active style from all buttons
+    document.querySelectorAll(".nav-btn").forEach(btn => {
+      btn.classList.remove("text-blue-600", "font-bold");
+      btn.classList.add("text-black");
+    });
+
+    // Add active style to clicked button
+    button.classList.remove("text-black");
+    button.classList.add("text-blue-600", "font-bold");
+
+    // Navigate to the page
+    window.location.href = page;
+  }
+
+  // Highlight current page on load
+  window.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-btn").forEach(btn => {
+      if (btn.getAttribute("onclick").includes(currentPath)) {
+        btn.classList.add("text-blue-600", "font-bold");
+        btn.classList.remove("text-black");
+      }
+    });
+  });
+</script>
+</body>
+</html>

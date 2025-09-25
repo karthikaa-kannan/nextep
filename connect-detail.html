@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile | NEXTEP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .interest-chip {
+            transition: all 0.2s ease;
+        }
+        .interest-chip:hover {
+            transform: translateY(-2px);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .nextep-font {
+            font-family: 'Poppins', sans-serif;
+        }
+        .bg-primary {
+            background-color: #1A3DFF;
+        }
+        .text-primary {
+            color: #1A3DFF;
+        }
+        .bg-growth {
+            background-color: #2DCB8E;
+        }
+        .text-growth {
+            color: #2DCB8E;
+        }
+        .bg-energy {
+            background-color: #F4B942;
+        }
+        .text-energy {
+            color: #F4B942;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .rounded-lg {
+            border-radius: 12px;
+        }
+         .active {
+        border-bottom: 2px solid #1D4ED8; /* Blue underline */
+    }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img src="logo.jpg" alt="Logo" class="w-10 h-10 rounded-full object-cover mr-2">
+      <span class="text-2xl font-bold text-primary">NEXTEP</span>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="flex gap-6 items-center">
+      <button onclick="navigate(this, 'index.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Home
+      </button>
+      <button onclick="navigate(this, 'connect.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Connect
+      </button>
+      <button onclick="navigate(this, 'blog.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Blog
+      </button>
+      <button onclick="navigate(this, 'org.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Organizer
+      </button>
+      <button onclick="navigate(this, 'profile.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        My Profile
+      </button>
+      <button onclick="window.location.href='https://tally.so/r/mDOBGZ'" 
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
+        Join Waitlist
+      </button>
+    </div>
+  </div>
+</header>
+
+    <!-- Profile Header -->
+<header class="py-12 bg-white">
+    <div class="container mx-auto px-4" data-aos="fade-up">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+            <!-- Profile Image -->
+            <div class="flex-shrink-0">
+                <div class="w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-gray-200 overflow-hidden shadow-lg mx-auto md:mx-0">
+                    <img src="profile.png" alt="Profile" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Profile Content -->
+            <div class="flex-1 text-center md:text-left space-y-2">
+                <h1 class="text-5xl font-bold text-blue-600">Karthikaa Kannan</h1>
+                <p class="text-gray-600 text-lg">17 years old</p>
+                <p class="text-gray-600 text-lg">Coimbatore, Tamilnadu, India</p>
+                <p class="text-gray-800 font-medium text-lg">BBA, IIM Bangalore</p>
+
+                <!-- Interests -->
+                <div class="flex flex-wrap gap-3 justify-center md:justify-start mt-4">
+                    <span class="interest-chip bg-black text-white px-4 py-1 rounded-full text-sm font-medium transition duration-300 hover:bg-gray-800 hover:scale-105 cursor-pointer">
+                        Entrepreneurship
+                    </span>
+                    <span class="interest-chip bg-black text-white px-4 py-1 rounded-full text-sm font-medium transition duration-300 hover:bg-gray-800 hover:scale-105 cursor-pointer">
+                        Content Creation
+                    </span>
+                    <span class="interest-chip bg-black text-white px-4 py-1 rounded-full text-sm font-medium transition duration-300 hover:bg-gray-800 hover:scale-105 cursor-pointer">
+                        Freelancing
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 max-w-4xl">
+        <!-- About Section -->
+        <section class="mb-16 bg-blue-600 p-8 rounded-xl shadow-sm" data-aos="fade-up">
+    <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
+        <i data-feather="user" class="mr-2"></i> About Me
+    </h2>
+    <div>
+        <p class="text-white leading-relaxed">
+            I'm not just dreaming of becoming a future billionaire - I'm building the foundation for it today. I’m a passionate aspiring entrepreneur, freelancer, and content creator currently developing my own startup, while working on multiple ventures simultaneously. I love exploring new ideas, learning something new every day, and pushing myself beyond limits - curiosity and growth are my fuel.
+        </p>
+    </div>
+</section>
+
+
+        <!-- Growth Tracking -->
+<section class="mb-16 bg-blue-600 p-8 rounded-xl shadow-sm" data-aos="fade-up">
+    <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
+        <i data-feather="trending-up" class="mr-2"></i> My Journey with NEXTEP
+    </h2>
+    
+    <!-- Metrics -->
+    <div class="grid md:grid-cols-2 gap-6 mb-10">
+        <div class="bg-blue-500 p-6 rounded-xl shadow-sm">
+            <div class="flex justify-between items-center mb-3">
+                <h3 class="font-medium text-white">NEXTEP Score</h3>
+                <span class="text-white font-bold">87/100</span>
+            </div>
+            <div class="w-full bg-blue-400 rounded-full h-2.5">
+                <div class="bg-white h-2.5 rounded-full" style="width: 87%"></div>
+            </div>
+        </div>
+        <div class="bg-blue-500 p-6 rounded-xl shadow-sm">
+            <div class="flex justify-between items-center">
+                <h3 class="font-medium text-white">Global Rank</h3>
+                <span class="text-white font-bold">#1 out of 1,000 students</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <!-- Opportunities -->
+<div class="mb-10 bg-blue-600 p-8 rounded-xl shadow-sm" data-aos="fade-up">
+    <h3 class="text-xl font-semibold text-white mb-6">Opportunities Participated</h3>
+    <div class="grid md:grid-cols-2 gap-4">
+        <!-- Card 1 -->
+        <div class="card-hover bg-blue-500 p-5 rounded-xl shadow-sm border-l-4 border-white">
+            <div class="flex items-start mb-3">
+                <img src="http://static.photos/technology/60x60/1" alt="Hackathon" class="w-12 h-12 rounded-full border-2 border-white mr-4">
+                <div>
+                    <h4 class="font-bold text-white">AI Innovation Hackathon</h4>
+                    <p class="text-sm text-white/80">March 2023</p>
+                </div>
+            </div>
+            <div class="flex justify-between items-center">
+                <span class="text-xs px-2 py-1 bg-white text-blue-600 rounded-full">Machine Learning</span>
+                <span class="text-sm font-medium text-white flex items-center">
+                    <i data-feather="award" class="w-4 h-4 mr-1"></i> Winner
+                </span>
+            </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="card-hover bg-blue-500 p-5 rounded-xl shadow-sm border-l-4 border-white">
+            <div class="flex items-start mb-3">
+                <img src="http://static.photos/education/60x60/2" alt="Workshop" class="w-12 h-12 rounded-full border-2 border-white mr-4">
+                <div>
+                    <h4 class="font-bold text-white">Blockchain Workshop</h4>
+                    <p class="text-sm text-white/80">January 2023</p>
+                </div>
+            </div>
+            <div class="flex justify-between items-center">
+                <span class="text-xs px-2 py-1 bg-white text-blue-600 rounded-full">Blockchain</span>
+                <span class="text-sm font-medium text-white flex items-center">
+                    <i data-feather="check" class="w-4 h-4 mr-1"></i> Participated
+                </span>
+            </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="card-hover bg-blue-500 p-5 rounded-xl shadow-sm border-l-4 border-white">
+            <div class="flex items-start mb-3">
+                <img src="http://static.photos/business/60x60/3" alt="Mentorship" class="w-12 h-12 rounded-full border-2 border-white mr-4">
+                <div>
+                    <h4 class="font-bold text-white">Tech Leaders Mentorship</h4>
+                    <p class="text-sm text-white/80">November 2022</p>
+                </div>
+            </div>
+            <div class="flex justify-between items-center">
+                <span class="text-xs px-2 py-1 bg-white text-blue-600 rounded-full">Career Growth</span>
+                <span class="text-sm font-medium text-white flex items-center">
+                    <i data-feather="check" class="w-4 h-4 mr-1"></i> Participated
+                </span>
+            </div>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="card-hover bg-blue-500 p-5 rounded-xl shadow-sm border-l-4 border-white">
+            <div class="flex items-start mb-3">
+                <img src="http://static.photos/science/60x60/4" alt="Competition" class="w-12 h-12 rounded-full border-2 border-white mr-4">
+                <div>
+                    <h4 class="font-bold text-white">Robotics Challenge</h4>
+                    <p class="text-sm text-white/80">August 2022</p>
+                </div>
+            </div>
+            <div class="flex justify-between items-center">
+                <span class="text-xs px-2 py-1 bg-white text-blue-600 rounded-full">Robotics</span>
+                <span class="text-sm font-medium text-white flex items-center">
+                    <i data-feather="award" class="w-4 h-4 mr-1"></i> Finalist
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- Achievements -->
+<div>
+    <h2 class="text-2xl font-bold text-blue-600 mb-6 flex items-center">
+        Achievements
+    </h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-white p-4 rounded-xl shadow-sm flex items-start">
+            <div class="bg-blue-600 p-2 rounded-lg mr-4">
+                <i data-feather="award" class="text-white"></i>
+            </div>
+            <div>
+                <h4 class="font-medium text-blue-600">Winner - AI Hackathon 2023</h4>
+                <p class="text-blue-600 text-sm">Developed an innovative NLP solution</p>
+            </div>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow-sm flex items-start">
+            <div class="bg-blue-600 p-2 rounded-lg mr-4">
+                <i data-feather="star" class="text-white"></i>
+            </div>
+            <div>
+                <h4 class="font-medium text-blue-600">Top 5% - Global Coding Challenge</h4>
+                <p class="text-blue-600 text-sm">Among 10,000 participants</p>
+            </div>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow-sm flex items-start">
+            <div class="bg-blue-600 p-2 rounded-lg mr-4">
+                <i data-feather="zap" class="text-white"></i>
+            </div>
+            <div>
+                <h4 class="font-medium text-blue-600">Fastest Algorithm - Code Sprint</h4>
+                <p class="text-blue-600 text-sm">Optimized solution by 40%</p>
+            </div>
+        </div>
+    </div>
+</div>
+        </section>
+
+        <!-- Connect Section -->
+<section class="container mx-auto px-4 py-8 bg-white rounded-xl shadow-sm">
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold text-gray-900">Connect with Me!</h2>
+        <button class="text-blue-600 hover:text-blue-800 flex items-center gap-1 transition duration-300">
+            <i data-feather="edit-2" class="w-4 h-4"></i> Edit
+        </button>
+    </div>
+    
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <a href="https://linkedin.com/in/karthikaa-kannan" target="_blank"
+           class="social-icon flex flex-col items-center justify-center p-4 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 hover:text-blue-800 transform transition duration-300 hover:scale-110">
+            <i data-feather="linkedin" class="w-6 h-6"></i>
+            <span class="text-xs mt-2">LinkedIn</span>
+        </a>
+        <a href="https://instagram.com/iam_karthikaakannan" target="_blank"
+           class="social-icon flex flex-col items-center justify-center p-4 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 hover:text-blue-800 transform transition duration-300 hover:scale-110">
+            <i data-feather="instagram" class="w-6 h-6"></i>
+            <span class="text-xs mt-2">Instagram</span>
+        </a>
+        <a href="https://youtube.com/@karthikaa-kannan" target="_blank"
+           class="social-icon flex flex-col items-center justify-center p-4 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 hover:text-blue-800 transform transition duration-300 hover:scale-110">
+            <i data-feather="youtube" class="w-6 h-6"></i>
+            <span class="text-xs mt-2">YouTube</span>
+        </a>
+        <a href="https://github.com/karthikaa-kannan" target="_blank"
+           class="social-icon flex flex-col items-center justify-center p-4 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 hover:text-blue-800 transform transition duration-300 hover:scale-110">
+            <i data-feather="github" class="w-6 h-6"></i>
+            <span class="text-xs mt-2">GitHub</span>
+        </a>
+        <a href="mailto:karthikaakannankk@gmail.com" target="_blank"
+           class="social-icon flex flex-col items-center justify-center p-4 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 hover:text-blue-800 transform transition duration-300 hover:scale-110">
+            <i data-feather="mail" class="w-6 h-6"></i>
+            <span class="text-xs mt-2">Email</span>
+        </a>
+        <a href="tel:8220355899" target="_blank"
+           class="social-icon flex flex-col items-center justify-center p-4 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 hover:text-blue-800 transform transition duration-300 hover:scale-110">
+            <i data-feather="phone" class="w-6 h-6"></i>
+            <span class="text-xs mt-2">Phone</span>
+        </a>
+    </div>
+</section>
+
+<script>
+    // Load Feather Icons
+    feather.replace();
+</script>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="logo.jpg" alt="Logo" class="w-10 h-10 rounded-full object-cover mr-2">
+                        <span class="text-2xl font-bold text-white">NEXTEP</span>
+                    </div>
+                    <p class="text-gray-400">Helping students discover their next big opportunity since 2025.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="home.html" class="text-gray-400 hover:text-white transition">Opportunities</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="text-center flex flex-col items-center space-y-4">
+    <h4 class="text-lg font-semibold text-white">Connect</h4>
+
+    <!-- Social Icons Vertical -->
+<div class="grid grid-cols-2 gap-3 items-start text-white">
+    <!-- Icons Column -->
+    <div class="flex flex-col items-center space-y-3">
+        <i data-feather="instagram" class="hover:text-blue-300 transition cursor-pointer"></i>
+        <i data-feather="linkedin" class="hover:text-blue-300 transition cursor-pointer"></i>
+        <i data-feather="youtube" class="hover:text-blue-300 transition cursor-pointer"></i>
+    </div>
+
+    <!-- Text Column -->
+    <div class="flex flex-col space-y-3">
+        <a href="https://www.instagram.com/nextep.students/" target="_blank" class="hover:text-blue-300 transition">nextep.students</a>
+        <a href="https://nextepforstudentslinkedin.com/company" target="_blank" class="hover:text-blue-300 transition">Nextep</a>
+        <a href="#" class="hover:text-blue-300 transition">YouTube</a>
+    </div>
+</div>
+
+<!-- Email with Icon -->
+<div class="flex items-center space-x-2 text-white mt-4">
+    <i data-feather="mail" class="hover:text-blue-300 transition cursor-pointer"></i>
+    <a href="mailto:nextepforstudents@gmail.com" class="underline hover:text-blue-300">nextepforstudents@gmail.com</a>
+</div>
+
+<script>
+    feather.replace(); // Load Feather icons
+</script>
+</div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-2">Stay updated with new opportunities.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="bg-gray-800 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary w-full">
+                        <button class="bg-primary text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 NEXTEP. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+
+        // Function to set active underline on click
+    function navigate(button, url) {
+        document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        window.location.href = url;
+    }
+
+    // Keep underline on current page after reload
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+        if (btn.getAttribute('onclick').includes(currentPage)) {
+            btn.classList.add('active');
+        }
+    });
+    </script>
+    <script>
+  function navigate(button, page) {
+    // Remove active style from all buttons
+    document.querySelectorAll(".nav-btn").forEach(btn => {
+      btn.classList.remove("text-blue-600", "font-bold");
+      btn.classList.add("text-black");
+    });
+
+    // Add active style to clicked button
+    button.classList.remove("text-black");
+    button.classList.add("text-blue-600", "font-bold");
+
+    // Navigate to the page
+    window.location.href = page;
+  }
+
+  // Highlight current page on load
+  window.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-btn").forEach(btn => {
+      if (btn.getAttribute("onclick").includes(currentPath)) {
+        btn.classList.add("text-blue-600", "font-bold");
+        btn.classList.remove("text-black");
+      }
+    });
+  });
+</script>
+</body>
+</html>

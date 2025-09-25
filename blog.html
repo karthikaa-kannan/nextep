@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The NEXTEP Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .category-tag {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+        .nextep-font {
+            font-family: 'Poppins', sans-serif;
+        }
+        .bg-primary {
+            background-color: #1A3DFF;
+        }
+        .text-primary {
+            color: #1A3DFF;
+        }
+        .bg-growth {
+            background-color: #2DCB8E;
+        }
+        .text-growth {
+            color: #2DCB8E;
+        }
+        .bg-energy {
+            background-color: #F4B942;
+        }
+        .text-energy {
+            color: #F4B942;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .rounded-lg {
+            border-radius: 12px;
+        }
+        .active-tab {
+            border-bottom: 3px solid #1A3DFF;
+            font-weight: 600;
+            color: #1A3DFF;
+        }
+         .active {
+        border-bottom: 2px solid #1D4ED8; /* Blue underline */
+    }
+    </style>
+</head>
+<body class="bg-white font-sans">
+    <!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img src="logo.jpg" alt="Logo" class="w-10 h-10 rounded-full object-cover mr-2">
+      <span class="text-2xl font-bold text-primary">NEXTEP</span>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="flex gap-6 items-center">
+      <button onclick="navigate(this, 'index.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Home
+      </button>
+      <button onclick="navigate(this, 'connect.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Connect
+      </button>
+      <button onclick="navigate(this, 'blog.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Blog
+      </button>
+      <button onclick="navigate(this, 'org.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        Organizer
+      </button>
+      <button onclick="navigate(this, 'profile.html')" 
+        class="nav-btn text-black font-medium hover:text-blue-600 transition duration-300">
+        My Profile
+      </button>
+      <button onclick="window.location.href='https://tally.so/r/mDOBGZ'" 
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
+        Join Waitlist
+      </button>
+    </div>
+  </div>
+</header>
+    <!-- Hero Banner -->
+<div class="relative bg-[#1A3DFF] text-white py-24 px-4 md:px-10 lg:px-20">
+    <div class="max-w-5xl mx-auto text-center" data-aos="fade-up">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+            The NEXTEP Blog
+        </h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-8">
+            This is where stories spark inspiration. From students achieving big with NEXTEP, to growth hacks that can elevate your journey, to snapshots of our work in bringing education to underprivileged communities – explore, learn, and get inspired. Every story here is a stepping stone, every insight a chance to grow.<br><br>
+            Have a story or insight of your own? Write your blog, get featured on NEXTEP, and earn while inspiring others.
+        </p>
+
+        <!-- Buttons -->
+        <div class="flex justify-center gap-4 flex-wrap">
+            <a href="read-blog.html" class="bg-white text-[#1A3DFF] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition">
+                Read Blog
+            </a>
+            <a href="write-blog.html" class="bg-transparent border border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-[#1A3DFF] transition">
+                Write Blog
+            </a>
+        </div>
+    </div>
+</div>
+
+    <!-- Category Tabs -->
+    <div class="max-w-6xl mx-auto px-4 md:px-10 lg:px-20 py-10">
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="px-6 py-2 bg-[#1A3DFF] text-white rounded-full font-medium">Success Stories</button>
+            <button class="px-6 py-2 border border-gray-300 rounded-full font-medium">Growth Tips</button>
+            <button class="px-6 py-2 border border-gray-300 rounded-full font-medium">NEXTEP Impact</button>
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="blog-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 relative" data-aos="fade-up">
+                <div class="category-tag bg-[#1A3DFF] text-black px-3 py-1 rounded-full text-sm font-bold">Success Story</div>
+                <img src="http://static.photos/education/640x360/1" alt="Blog cover" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-[#1A3DFF]">How Rohan Cracked His First Hackathon with NEXTEP</h3>
+                    <p class="text-gray-600 mb-4">Discover how Rohan went from beginner to hackathon winner in just 3 months with NEXTEP's resources.</p>
+                    <a href="blog-detail.html" class="text-[#1A3DFF] font-medium flex items-center">Read Full Story <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="blog-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 relative" data-aos="fade-up" data-aos-delay="100">
+                <div class="category-tag bg-[#1A3DFF] text-black px-3 py-1 rounded-full text-sm font-bold">Growth Tip</div>
+                <img src="http://static.photos/office/640x360/2" alt="Blog cover" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-[#1A3DFF]">Top 7 Tips to Maximize Every Competition</h3>
+                    <p class="text-gray-600 mb-4">Learn the strategies that top performers use to get the most out of every competition they enter.</p>
+                    <a href="blog-detail.html" class="text-[#1A3DFF] font-medium flex items-center">Read Full Story <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="blog-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 relative" data-aos="fade-up" data-aos-delay="200">
+                <div class="category-tag bg-[#1A3DFF] text-black px-3 py-1 rounded-full text-sm font-bold">Impact Story</div>
+                <img src="http://static.photos/people/640x360/3" alt="Blog cover" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-[#1A3DFF]">NEXTEP Teaching Drive: Reaching 200 Students in Rural India</h3>
+                    <p class="text-gray-600 mb-4">Our journey to bring quality education to underprivileged communities in rural Maharashtra.</p>
+                    <a href="blog-detail.html" class="text-[#1A3DFF] font-medium flex items-center">Read Full Story <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-gray-50 py-16 px-4 md:px-10 lg:px-20">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-4 text-[#1A3DFF]">Write your own Blog <br>And Get Featured on NEXTEP!</h2>
+            <p class="text-xl text-gray-600 mb-8">Share your story, your journey, or your tips.<br> Inspire thousands of students <br>across India.</p>
+            <button class="bg-[#1A3DFF] hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                Submit Your Blog
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="logo.jpg" alt="Logo" class="w-10 h-10 rounded-full object-cover mr-2">
+                        <span class="text-2xl font-bold text-white">NEXTEP</span>
+                    </div>
+                    <p class="text-gray-400">Helping students discover their next big opportunity since 2025.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="home.html" class="text-gray-400 hover:text-white transition">Opportunities</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="text-center flex flex-col items-center space-y-4">
+    <h4 class="text-lg font-semibold text-white">Connect</h4>
+
+    <!-- Social Icons Vertical -->
+<div class="grid grid-cols-2 gap-3 items-start text-white">
+    <!-- Icons Column -->
+    <div class="flex flex-col items-center space-y-3">
+        <i data-feather="instagram" class="hover:text-blue-300 transition cursor-pointer"></i>
+        <i data-feather="linkedin" class="hover:text-blue-300 transition cursor-pointer"></i>
+        <i data-feather="youtube" class="hover:text-blue-300 transition cursor-pointer"></i>
+    </div>
+
+    <!-- Text Column -->
+    <div class="flex flex-col space-y-3">
+        <a href="https://www.instagram.com/nextep.students/" target="_blank" class="hover:text-blue-300 transition">nextep.students</a>
+        <a href="https://nextepforstudentslinkedin.com/company" target="_blank" class="hover:text-blue-300 transition">Nextep</a>
+        <a href="#" class="hover:text-blue-300 transition">YouTube</a>
+    </div>
+</div>
+
+<!-- Email with Icon -->
+<div class="flex items-center space-x-2 text-white mt-4">
+    <i data-feather="mail" class="hover:text-blue-300 transition cursor-pointer"></i>
+    <a href="mailto:nextepforstudents@gmail.com" class="underline hover:text-blue-300">nextepforstudents@gmail.com</a>
+</div>
+
+<script>
+    feather.replace(); // Load Feather icons
+</script>
+</div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-2">Stay updated with new opportunities.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="bg-gray-800 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary w-full">
+                        <button class="bg-primary text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 NEXTEP. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+
+        // Function to set active underline on click
+    function navigate(button, url) {
+        document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        window.location.href = url;
+    }
+
+    // Keep underline on current page after reload
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+        if (btn.getAttribute('onclick').includes(currentPage)) {
+            btn.classList.add('active');
+        }
+    });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        const tabs = document.querySelectorAll('.tab-btn');
+        const categories = document.querySelectorAll('.blog-category');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove 'show' class from all categories
+                categories.forEach(cat => {
+                    cat.classList.remove('show');
+                    cat.classList.add('hidden');
+                });
+
+                // Show the selected category
+                const target = document.getElementById(tab.dataset.target);
+                target.classList.remove('hidden');
+                target.classList.add('show');
+
+                // Highlight the active tab
+                tabs.forEach(t => t.classList.remove('bg-[#1A3DFF]','text-white','border-white'));
+                tab.classList.add('bg-[#1A3DFF]', 'text-white');
+            });
+        });
+    </script>
+    <script>
+  function navigate(button, page) {
+    // Remove active style from all buttons
+    document.querySelectorAll(".nav-btn").forEach(btn => {
+      btn.classList.remove("text-blue-600", "font-bold");
+      btn.classList.add("text-black");
+    });
+
+    // Add active style to clicked button
+    button.classList.remove("text-black");
+    button.classList.add("text-blue-600", "font-bold");
+
+    // Navigate to the page
+    window.location.href = page;
+  }
+
+  // Highlight current page on load
+  window.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-btn").forEach(btn => {
+      if (btn.getAttribute("onclick").includes(currentPath)) {
+        btn.classList.add("text-blue-600", "font-bold");
+        btn.classList.remove("text-black");
+      }
+    });
+  });
+</script>
+</body>
+</html>
